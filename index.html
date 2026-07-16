@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio Mahasiswa Sistem Informasi - Calon Web Developer & Mobile Developer">
+    <meta name="keywords" content="portfolio, web developer, mobile developer, laravel, flutter, mahasiswa sistem informasi">
+    <meta property="og:title" content="Portfolio Mahasiswa Sistem Informasi">
+    <meta property="og:description" content="Portfolio Mahasiswa Sistem Informasi - Calon Web Developer & Mobile Developer">
+    <meta property="og:type" content="website">
+    <title>Portfolio</title>
+    
+    <!-- Google Font: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    
+    <!-- AOS (Animate On Scroll) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!-- Dark mode init: apply before render to prevent flash -->
+    <script>
+        (function() {
+            if (localStorage.getItem('darkMode') === 'true') {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        })();
+    </script>
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="spinner-border text-success" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+    
+    <!-- Scroll Progress Bar -->
+    <div id="scroll-progress"></div>
+    
+    <!-- Navbar -->
+    <nav id="navbar" class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#certificate">Certificate</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+                <button id="dark-mode-toggle" class="btn btn-outline-success ms-3">
+                    <i class="bi bi-moon"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Home Section -->
+    <section id="home" class="home-section position-relative overflow-hidden">
+        <div class="container">
+            <div class="row align-items-center min-vh-100 py-5">
+                <!-- Text Column -->
+                <div class="col-lg-6 mb-5 mb-lg-0 order-2 order-lg-1" data-aos="fade-right" data-aos-duration="1000">
+                    <p class="hero-greeting">Halo</p>
+                    <h1 class="hero-name">
+                        Saya <span class="name-highlight">Ayasha<br>Rahmadaniah</span>
+                    </h1>
+                    <p class="hero-role">Mahasiswa Sistem Informasi</p>
+                    <p class="hero-stack">Web Development &nbsp;|&nbsp; Mobile Development</p>
+                    <p class="hero-desc">Mahasiswa Sistem Informasi yang berfokus pada Web Development, Mobile Development, dan Database. Memiliki semangat belajar tinggi serta siap mengembangkan solusi digital yang inovatif.</p>
+                    
+                    <!-- CTA Buttons -->
+                    <div class="hero-cta-wrap">
+                        <a href="#contact" class="btn-hero-outline">
+                            <i class="bi bi-chat-dots me-2"></i>Hubungi Saya
+                        </a>
+                    </div>
+                    
+                </div>
+
+                <!-- Image Column -->
+                <div class="col-lg-6 order-1 order-lg-2 d-flex justify-content-center align-items-center" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="hero-image-container">
+                        <!-- Background shapes -->
+                        <div class="abstract-shape shape-1"></div>
+                        <div class="abstract-shape shape-2"></div>
+                        
+                        <!-- Photo with gradient frame -->
+                        <div class="hero-photo-frame">
+                            <img src="assets/img/foto_profil3.png" alt="Profile Ayasha Rahmadaniah" class="profile-img">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section id="about" class="about-section py-5">
+        <div class="container py-5">
+            <h2 class="text-center fw-bold mb-5" data-aos="fade-up">About Me</h2>
+            <div class="row align-items-center">
+                <div class="col-lg-5 mb-5 mb-lg-0" data-aos="fade-right">
+                    <img src="assets/img/foto_profil2.png" 
+                         alt="About" class="about-img img-fluid rounded-4 shadow-lg">
+                </div>
+                <div class="col-lg-7" data-aos="fade-left">
+                    <p class="text-muted mb-4">
+                        Mahasiswa aktif Program Studi Sistem Informasi Universitas Bina Sarana Informatika yang memiliki minat pada bidang Web Development dan Database Administration, serta berkomitmen untuk terus mengembangkan kompetensi melalui pengalaman akademik, proyek, dan program Praktik Kerja Lapangan. Memiliki pemahaman dalam pengembangan aplikasi web serta pengelolaan basis data, meliputi perancangan, pemeliharaan, keamanan, dan optimalisasi database. Menguasai Microsoft Office (Word, Excel, dan PowerPoint), Canva, serta Power BI untuk pengolahan dan visualisasi data. Terbiasa menyelesaikan proyek secara mandiri maupun berkolaborasi dalam tim, memiliki kemampuan belajar yang cepat, komunikasi yang baik, serta siap memberikan kontribusi positif dan terus berkembang di lingkungan profesional.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section py-5 bg-light">
+        <div class="container py-5">
+            <h2 class="text-center fw-bold mb-5" data-aos="fade-up">My Skills</h2>
+            <div class="row justify-content-center">
+
+                <div class="col-md-4 col-sm-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="skill-card card p-4 shadow-sm text-center">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg" alt="Laravel" class="skill-logo mb-3">
+                        <h5 class="fw-semibold mb-3">Laravel</h5>
+                        <div class="progress mb-2" style="height: 8px;">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 90%"></div>
+                        </div>
+                        <p class="text-muted small">90%</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 mb-4" data-aos="fade-up" data-aos-delay="150">
+                    <div class="skill-card card p-4 shadow-sm text-center">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" class="skill-logo mb-3">
+                        <h5 class="fw-semibold mb-3">HTML</h5>
+                        <div class="progress mb-2" style="height: 8px;">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 80%"></div>
+                        </div>
+                        <p class="text-muted small">80%</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="skill-card card p-4 shadow-sm text-center">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" class="skill-logo mb-3">
+                        <h5 class="fw-semibold mb-3">CSS</h5>
+                        <div class="progress mb-2" style="height: 8px;">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 70%"></div>
+                        </div>
+                        <p class="text-muted small">70%</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 mb-4" data-aos="fade-up" data-aos-delay="250">
+                    <div class="skill-card card p-4 shadow-sm text-center">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" class="skill-logo mb-3">
+                        <h5 class="fw-semibold mb-3">JavaScript</h5>
+                        <div class="progress mb-2" style="height: 8px;">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 75%"></div>
+                        </div>
+                        <p class="text-muted small">75%</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="skill-card card p-4 shadow-sm text-center">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React JS" class="skill-logo mb-3">
+                        <h5 class="fw-semibold mb-3">React</h5>
+                        <div class="progress mb-2" style="height: 8px;">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 70%"></div>
+                        </div>
+                        <p class="text-muted small">70%</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 mb-4" data-aos="fade-up" data-aos-delay="350">
+                    <div class="skill-card card p-4 shadow-sm text-center">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="Flutter" class="skill-logo mb-3">
+                        <h5 class="fw-semibold mb-3">Flutter</h5>
+                        <div class="progress mb-2" style="height: 8px;">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 85%"></div>
+                        </div>
+                        <p class="text-muted small">85%</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 mb-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="skill-card card p-4 shadow-sm text-center">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" class="skill-logo mb-3">
+                        <h5 class="fw-semibold mb-3">MySQL</h5>
+                        <div class="progress mb-2" style="height: 8px;">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 88%"></div>
+                        </div>
+                        <p class="text-muted small">88%</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section py-5">
+        <div class="container py-5">
+            <h2 class="text-center fw-bold mb-5" data-aos="fade-up">My Projects</h2>
+            <div class="row justify-content-center">
+
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-card card shadow-sm h-100">
+                        <img src="assets/img/projects1.png" class="card-img-top" alt="Sistem Informasi Penjualan Online">
+                        <div class="card-body d-flex flex-column">
+                            <p class="text-muted small fw-semibold mb-1">Website E-Commerce</p>
+                            <h5 class="card-title fw-bold mb-2">Sistem Informasi Penjualan Online Ayasha Cake & Cookies</h5>
+                            <p class="card-text text-muted small mb-4 flex-grow-1">Mengembangkan website e-commerce untuk mendukung proses penjualan produk Ayasha Cake & Cookies secara online. Aplikasi dirancang dengan antarmuka yang responsif sehingga dapat diakses dengan baik melalui berbagai perangkat, serta membantu admin dalam mengelola produk, pelanggan, dan transaksi secara lebih efektif dan efisien.</p>
+                            <div>
+                                <a href="https://github.com/Ayasha-Rahmadaniah/TokoKueAyashaCake-Cookies.git" target="_blank" class="btn btn-sm btn-outline-success">
+                                    <i class="bi bi-github me-1"></i> Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-card card shadow-sm h-100">
+                        <img src="assets/img/projects2.png" class="card-img-top" alt="Aplikasi Beasiswa Pintar">
+                        <div class="card-body d-flex flex-column">
+                            <p class="text-muted small fw-semibold mb-1">Mobile Application & Admin Dashboard</p>
+                            <h5 class="card-title fw-bold mb-2">Aplikasi Beasiswa Pintar</h5>
+                            <p class="card-text text-muted small mb-4 flex-grow-1">Mengembangkan aplikasi mobile berbasis Flutter yang terintegrasi dengan dashboard admin berbasis website menggunakan Laravel untuk mempermudah proses pengajuan dan pengelolaan beasiswa. Sistem memanfaatkan REST API sebagai media komunikasi antara aplikasi mobile dan backend sehingga data dapat diproses secara real-time dan terintegrasi.</p>
+                            <div>
+                                <a href="https://github.com/Ayasha-Rahmadaniah/BeasiswaPintar-Mobile.git" target="_blank" class="btn btn-sm btn-outline-success">
+                                    <i class="bi bi-github me-1"></i> Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-card card shadow-sm h-100">
+                        <img src="assets/img/projects3.png" class="card-img-top" alt="Sistem Informasi Pendaftaran Beasiswa Bersama">
+                        <div class="card-body d-flex flex-column">
+                            <p class="text-muted small fw-semibold mb-1">Website Information System</p>
+                            <h5 class="card-title fw-bold mb-2">Sistem Informasi Pendaftaran Beasiswa Bersama</h5>
+                            <p class="card-text text-muted small mb-4 flex-grow-1">Merancang dan mengembangkan website sistem informasi pendaftaran beasiswa yang memudahkan mahasiswa melakukan pendaftaran secara online serta membantu admin dalam mengelola proses seleksi dan verifikasi data. Sistem dibangun dengan antarmuka yang responsif untuk memberikan pengalaman penggunaan yang nyaman di berbagai perangkat.</p>
+                            <div>
+                                <a href="https://github.com/Ayasha-Rahmadaniah/BeasiswaBersama.git" target="_blank" class="btn btn-sm btn-outline-success">
+                                    <i class="bi bi-github me-1"></i> Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Tombol All Code -->
+            <div class="text-center mt-4" data-aos="fade-up">
+                <a href="https://github.com/Ayasha-Rahmadaniah" target="_blank" class="btn btn-outline-success rounded-pill px-5 py-2">
+                    <i class="bi bi-github me-2"></i> All Code on GitHub
+                </a>
+            </div>
+
+        </div>
+    </section>
+    
+    <!-- Certificate Section -->
+    <section id="certificate" class="certificate-section py-5 bg-light">
+        <div class="container py-5">
+            <h2 class="text-center fw-bold mb-5" data-aos="fade-up">My Certificate</h2>
+            <div class="row justify-content-center">
+
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="certificate-card card shadow-sm h-100">
+                        <div class="card-body d-flex flex-column p-4">
+                            <div class="mb-3">
+                                <i class="bi bi-patch-check-fill fs-1" style="color: var(--primary);"></i>
+                            </div>
+                            <h5 class="card-title fw-bold mb-3">Sertifikat Uji Kompetensi Basis Data</h5>
+                            <p class="card-text text-muted small mb-3">
+                                <i class="bi bi-building me-1"></i> PT. Jidoka System Indonesia
+                            </p>
+                            <div class="mt-auto">
+                                <a href="assets/files/Sertifikat_Uji_Basis_Data.pdf" target="_blank" class="btn btn-sm btn-outline-success">
+                                    <i class="bi bi-eye me-1"></i> Lihat
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="certificate-card card shadow-sm h-100">
+                        <div class="card-body d-flex flex-column p-4">
+                            <div class="mb-3">
+                                <i class="bi bi-patch-check-fill fs-1" style="color: var(--primary);"></i>
+                            </div>
+                            <h5 class="card-title fw-bold mb-3">Sertifikat IT Bootcamp "Software Development for Industry"</h5>
+                            <p class="card-text text-muted small mb-3">
+                                <i class="bi bi-building me-1"></i> Universitas Bina Sarana Informatika
+                            </p>
+                            <div class="mt-auto">
+                                <a href="assets/files/Sertifikat_IT_Bootcamp.pdf" target="_blank" class="btn btn-sm btn-outline-success">
+                                    <i class="bi bi-eye me-1"></i> Lihat
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="certificate-card card shadow-sm h-100">
+                        <div class="card-body d-flex flex-column p-4">
+                            <div class="mb-3">
+                                <i class="bi bi-patch-check-fill fs-1" style="color: var(--primary);"></i>
+                            </div>
+                            <h5 class="card-title fw-bold mb-3">Sertifikat Kompetensi Database Administrator</h5>
+                            <p class="card-text text-muted small mb-3">
+                                <i class="bi bi-building me-1"></i> Badan Nasional Sertifikasi Profesi
+                            </p>
+                            <div class="mt-auto">
+                                <a href="assets/files/Sertifikat_Serkom_Database_Administrator.pdf" target="_blank" class="btn btn-sm btn-outline-success">
+                                    <i class="bi bi-eye me-1"></i> Lihat
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section py-5">
+        <div class="container py-5">
+            <h2 class="text-center fw-bold mb-5" data-aos="fade-up">My Contact</h2>
+            <div class="card shadow-lg rounded-4 border-0" data-aos="fade-up">
+                <div class="card-body p-5">
+                    <div class="row">
+
+                        <!-- Informasi Kontak -->
+                        <div class="col-lg-5 mb-5 mb-lg-0">
+                            <h4 class="fw-semibold mb-4">Informasi Kontak</h4>
+
+                            <a href="mailto:email@example.com" class="contact-info-item text-decoration-none">
+                                <i class="bi bi-envelope"></i>
+                                <span>yashadiyah2820@gmail.com</span>
+                            </a>
+
+                            <a href="https://wa.me/6281234567890" target="_blank" class="contact-info-item text-decoration-none">
+                                <i class="bi bi-whatsapp"></i>
+                                <span>+62 857-1696-3142</span>
+                            </a>
+
+                            <a href="https://instagram.com/username" target="_blank" class="contact-info-item text-decoration-none">
+                                <i class="bi bi-instagram"></i>
+                                <span>krrpys_</span>
+                            </a>
+                        </div>
+
+                        <!-- Form Kirim Pesan -->
+                        <div class="col-lg-7">
+                            <h4 class="fw-semibold mb-4">Kirim Pesan</h4>
+                            <form id="contact-form" action="https://formspree.io/f/xojgjnvw" method="POST">
+                                <div class="mb-3">
+                                    <label for="name" class="form-label">Nama</label>
+                                    <input type="text" class="form-control" id="name" name="name" placeholder="Nama kamu" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="email@example.com" required>
+                                </div>
+                                <div class="mb-4">
+                                    <label for="message" class="form-label">Pesan</label>
+                                    <textarea class="form-control" id="message" name="message" rows="5" placeholder="Tulis pesanmu di sini..." required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-success rounded-pill px-5">
+                                    <i class="bi bi-send me-2"></i> Kirim Pesan
+                                </button>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+                    <p class="mb-0 small" style="color: #9A8C98;">Portfolio</p>
+                    <p class="mb-0 small" style="color: #9A8C98;">© 2026 Ayasha Rahmadaniah. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0 small" style="color: #9A8C98;">Designed &amp; Developed by Ayasha Rahmadaniah.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Back To Top Button -->
+    <button id="back-to-top" class="btn btn-success rounded-circle shadow-lg">
+        <i class="bi bi-arrow-up fs-4"></i>
+    </button>
+    
+    <!-- Bootstrap 5.3 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- AOS (Animate On Scroll) -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
